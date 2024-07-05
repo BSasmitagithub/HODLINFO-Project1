@@ -1,0 +1,31 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const cryptoData = document.getElementById('crypto-data');
+    const bestPriceElement = document.getElementById('best-price');
+
+    // Function to render crypto data in the table
+    function renderCryptoData(data) {
+        cryptoData.innerHTML = ''; // Clear previous data
+
+        data.forEach((item, index) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${index + 1}</td>
+                <td>${item.name}</td>
+                <td>₹${item.last}</td>
+                <td>₹${item.buy} / ₹${item.sell}</td>
+                <td>${(parseFloat(item.last) - parseFloat(item.buy)).toFixed(2)}</td>
+                <td>${(parseFloat(item.last) - parseFloat(item.sell)).toFixed(2)}</td>
+            `;
+            cryptoData.appendChild(row);
+        });
+
+        // Update best price (replace with your logic to determine best price)
+        bestPriceElement.textContent = data[0].last;
+    }
+
+    // Fetch data from the API
+    fetch('/api/cryptodata')
+        .then(response => response.json())
+        .then(data => renderCryptoData(data))
+        .catch(error => console.error('Error fetching data:', error));
+});

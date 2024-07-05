@@ -1,3 +1,5 @@
+##JAVASCRIPT
+
 document.addEventListener('DOMContentLoaded', () => {
     const cryptoData = document.getElementById('crypto-data');
     const bestPriceElement = document.getElementById('best-price');

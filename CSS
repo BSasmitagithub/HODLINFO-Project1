@@ -1,0 +1,87 @@
+body {
+    background-color: #181818;
+    color: #fff;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #222;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.price-info {
+    display: flex;
+    align-items: center;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.currency-symbol {
+    font-size: 2rem;
+    vertical-align: super;
+}
+
+.percentage-changes {
+    display: flex;
+    align-items: center;
+}
+
+.change {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.percentage {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.time-period {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+main {
+    padding: 20px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #333;
+}
+
+th {
+    background-color: #333;
+    font-weight: bold;
+}
+
+td {
+    color: #ddd;
+}
